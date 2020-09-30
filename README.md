@@ -66,6 +66,7 @@ Returns `nested dict`. It returns a dictionary with all the lessons you have stu
   sessionModulesCorrect: 25
   sessionModulesStudied: 69
   sessionsCompleted: 3
+  studied: True
   spacing: 1.9807043651
   totalStudyTime: 466
   userId: "<REDACTED>"
