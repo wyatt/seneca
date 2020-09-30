@@ -1,4 +1,4 @@
-# seneca
+# Seneca-Learning
 ![version badge](https://img.shields.io/pypi/v/senecalearning) ![downloads badge](https://img.shields.io/pypi/pyversions/senecalearning)
 
 A small, unofficial python API for SenecaLearning. This in a *beta stage* so please be prepared for bugs and issues 🐛. If anyone from SenecaLearning is reading this, a way to drastically improve this project is to introduce a way to create API keys 🔑. I am a student so updates may be erractic, but I hope to keep it as up to date as I can. If you can help improve this project in any way - create a pull request! I'm sure there's things I should be doing better and/or differently.
@@ -8,17 +8,17 @@ A small, unofficial python API for SenecaLearning. This in a *beta stage* so ple
 ## Usage
 `import senecalearning`
 ## Methods
-### seneca.login()
+### senecalearning.login()
 ```python
-seneca.login("<Your API Token>")
+senecalearning.login("<Your API Token>")
 ```
-Returns `None`. Required for authentication - Seneca cannot be queried without it.
+Returns `None`. Required for authentication - SenecaLearning cannot be queried without it.
 
-### seneca.getCoursesInfo(search="")
+### senecalearning.getCoursesInfo(search="")
 ```python
-seneca.getCoursesInfo(search="<search query>") #i.e. AQA Biology
+senecalearning.getCoursesInfo(search="<search query>") #i.e. AQA Biology
 # Can also be ran with no parameter
-seneca.getCoursesInfo()
+senecalearning.getCoursesInfo()
 ```
 ```python
 #Example dictionary item
@@ -39,14 +39,14 @@ seneca.getCoursesInfo()
 ```
 Returns `nested dictionary`. It returns a dictionary with courses that contain the search term. The key is the course title and the value is the metadata associated with that course. Please note, if you run this with no search query, it will return all courses and their metadata - a large amount of data!
 
-### seneca.getCourseInfo(id="")
+### senecalearning.getCourseInfo(id="")
 ```python
-seneca.getCourseInfo(id="<course id>")
+senecalearning.getCourseInfo(id="<course id>")
 ```
 Returns `dict`. It returns a dictionary with metadata about the relevant course. The key is the course title.
-### seneca.getCourseStats(id="")
+### senecalearning.getCourseStats(id="")
 ```python
-seneca.getCourseStats(id="<course id>")
+senecalearning.getCourseStats(id="<course id>")
 ```
 Returns `nested dict`. It returns a dictionary with all the lessons you have studied in the specified course and their metadata
 ```python
