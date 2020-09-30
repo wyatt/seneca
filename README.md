@@ -10,15 +10,15 @@ A small, unofficial python API for SenecaLearning. This in a *beta stage* so ple
 ## Methods
 ### senecalearning.login()
 ```python
-senecalearning.login("<Your API Token>")
+seneca = senecalearning.login("<Your API Token>")
 ```
 Returns `None`. Required for authentication - SenecaLearning cannot be queried without it.
 
 ### senecalearning.getCoursesInfo(search="")
 ```python
-senecalearning.getCoursesInfo(search="<search query>") #i.e. AQA Biology
+seneca.getCoursesInfo(search="<search query>") #i.e. AQA Biology
 # Can also be ran with no parameter
-senecalearning.getCoursesInfo()
+seneca.getCoursesInfo()
 ```
 ```python
 #Example dictionary item
@@ -41,12 +41,12 @@ Returns `nested dictionary`. It returns a dictionary with courses that contain t
 
 ### senecalearning.getCourseInfo(id="")
 ```python
-senecalearning.getCourseInfo(id="<course id>")
+seneca.getCourseInfo(id="<course id>")
 ```
 Returns `dict`. It returns a dictionary with metadata about the relevant course. The key is the course title.
 ### senecalearning.getCourseStats(id="")
 ```python
-senecalearning.getCourseStats(id="<course id>")
+seneca.getCourseStats(id="<course id>")
 ```
 Returns `nested dict`. It returns a dictionary with all the lessons you have studied in the specified course and their metadata
 ```python
