@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 class login:
   def __init__(self, token=None):
     self.token = token
