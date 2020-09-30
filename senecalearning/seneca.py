@@ -84,5 +84,3 @@ class login:
     else:
       print("Please provide a course ID")
       return
-    
-    
