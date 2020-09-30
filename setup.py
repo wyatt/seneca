@@ -12,4 +12,9 @@ setuptools.setup(
     url="https://github.com/wyatt/seneca",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3 :: Only",
+    ]
 )
