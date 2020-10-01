@@ -6,11 +6,17 @@ A small, unofficial python API for SenecaLearning. This in a *beta stage* so ple
 ## Installation
 `pip install senecalearning`
 ## Usage
-`import senecalearning`
+```python
+import senecalearning
+seneca = senecalearning.login("<Your Login Token")
+seneca.<method>
+```
+## How to get your login token
+Unfortunately, Seneca doesn't provide an easy way to get a login token yet, so the only programmatic way I could find to do it was to use [Puppeteer](https://github.com/puppeteer/puppeteer) and scrape the response data. An [example](../examples/loginToken/) is in the examples folder. Please note, it uses NodeJS, not Python.
 ## Methods
 ### senecalearning.login()
 ```python
-seneca = senecalearning.login("<Your API Token>")
+seneca = senecalearning.login("<Your Login Token>")
 ```
 Returns `None`. Required for authentication - SenecaLearning cannot be queried without it.
 
