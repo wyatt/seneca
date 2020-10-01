@@ -11,4 +11,4 @@ import senecalearning
 seneca = senecalearning.login("<Your Login Token")
 seneca.<method>
 ```
-## More documentation on (Github)[https://github.com/wyatt/seneca]
+## More documentation on [Github](https://github.com/wyatt/seneca)
