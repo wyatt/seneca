@@ -5,6 +5,8 @@ A small, unofficial python API for SenecaLearning. This in a *beta stage* so ple
  
 ## Installation
 `pip install senecalearning`
+
+[PyPI link](https://pypi.org/project/senecalearning/)
 ## Usage
 ```python
 import senecalearning
