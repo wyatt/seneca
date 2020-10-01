@@ -12,7 +12,7 @@ seneca = senecalearning.login("<Your Login Token")
 seneca.<method>
 ```
 ## How to get your login token
-Unfortunately, Seneca doesn't provide an easy way to get a login token yet, so the only programmatic way I could find to do it was to use [Puppeteer](https://github.com/puppeteer/puppeteer) and scrape the response data. An [example](../examples/loginToken/) is in the examples folder. Please note, it uses NodeJS, not Python.
+Unfortunately, Seneca doesn't provide an easy way to get a login token yet, so the only programmatic way I could find to do it was to use [Puppeteer](https://github.com/puppeteer/puppeteer) and scrape the response data. An [example](../examples/loginToken/) is in the examples folder. Please note, it uses NodeJS, not Python. Apparently there is a Python port of Puppeteer but I'm couldn't get it to wwork - perhaps someone smarter might be able to.
 ## Methods
 ### senecalearning.login()
 ```python
