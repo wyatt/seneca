@@ -45,14 +45,14 @@ seneca.getCoursesInfo()
 ```
 Returns `nested dictionary`. It returns a dictionary with courses that contain the search term. The key is the course title and the value is the metadata associated with that course. Please note, if you run this with no search query, it will return all courses and their metadata - a large amount of data!
 
-### senecalearning.getCourseInfo(id="")
+### senecalearning.getCourseInfo(courseId="")
 ```python
-seneca.getCourseInfo(id="<course id>")
+seneca.getCourseInfo(courseId="<course id>")
 ```
 Returns `dict`. It returns a dictionary with metadata about the relevant course. The key is the course title.
-### senecalearning.getCourseStats(id="")
+### senecalearning.getCourseStats(courseId="")
 ```python
-seneca.getCourseStats(id="<course id>")
+seneca.getCourseStats(courseId="<course id>")
 ```
 Returns `nested dict`. It returns a dictionary with all the lessons you have studied in the specified course and their metadata
 ```python
