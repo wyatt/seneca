@@ -13,7 +13,7 @@ class login:
       self.notoken()
   def notoken(self):
     print("Error. Please provide a token")
-    return
+    return False
   def getCoursesInfo(self, search=None):
     self.search = search
     try:
@@ -34,40 +34,39 @@ class login:
         else:
           continue
       return matches
-    else:
-      allCourses = {}
-      for course in response:
-          name = course["_source"]["name"].rstrip()
-          allCourses[name] = {}
-          del course["_source"]["name"]
-          allCourses[name] = course["_source"]
-      return allCourses
+    allCourses = {}
+    for course in response:
+        name = course["_source"]["name"].rstrip()
+        allCourses[name] = {}
+        del course["_source"]["name"]
+        allCourses[name] = course["_source"]
+    return allCourses
 
-  def getCourseInfo(self, id=None):
-    self.id = id
+  def getCourseInfo(self, courseId=None):
+    self.courseId = courseId
     try:
       self.senecaHeaders["correlationid"] = "1601321310216::fd9a102ee3fae8831161503a13668f7c"
       response = json.loads(requests.get(
-          f"https://course-cdn-v2.app.senecalearning.com/api/courses/{self.id}/sections", headers=self.senecaHeaders).text)["course"]
+          f"https://course-cdn-v2.app.senecalearning.com/api/courses/{self.courseId}/sections", headers=self.senecaHeaders).text)["course"]
     except requests.exceptions.RequestException as e:
       raise SystemExit(e)
     return response
   
-  def getCourseStats(self, id=None):
-    self.id = id
-    if id:
+  def getCourseStats(self, courseId=None):
+    self.courseId = courseId
+    if courseId:
       stats = {}
       try:
         self.senecaHeaders["correlationid"] = "1601321310197::866588fb985024c4395d76098d47cd09"
         response = json.loads(requests.get(
-            f"https://stats.app.senecalearning.com/api/stats/sections?courseId={self.id}", headers=self.senecaHeaders).text)["stats"]
+            f"https://stats.app.senecalearning.com/api/stats/sections?courseId={self.courseId}", headers=self.senecaHeaders).text)["stats"]
       except requests.exceptions.RequestException as e:
         raise SystemExit(e)
       for item in response:
         stats[item["sectionId"]] = item
       try:
         self.senecaHeaders["correlationid"] = "1601321310216::fd9a102ee3fae8831161503a13668f7c"
-        response = json.loads(requests.get(f"https://course-cdn-v2.app.senecalearning.com/api/courses/{self.id}/sections", headers=self.senecaHeaders).text)["sections"]
+        response = json.loads(requests.get(f"https://course-cdn-v2.app.senecalearning.com/api/courses/{self.courseId}/sections", headers=self.senecaHeaders).text)["sections"]
       except requests.exceptions.RequestException as e:
         raise SystemExit(e)
       for item in response:
@@ -81,6 +80,5 @@ class login:
           stats[title] = item
           stats[title]["studied"] = False
       return stats
-    else:
-      print("Please provide a course ID")
-      return
+    print("Please provide a course ID")
+    return
