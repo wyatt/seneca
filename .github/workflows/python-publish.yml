@@ -24,7 +24,7 @@ jobs:
       - name: Config git
         run: |
           git config --local user.email "profwyatt@gmail.com"
-          git config --local user.name "Wyatt Sell"
+          git config --local user.name "Version bump and upload"
       - name: Bump version
         run: |
           python -m bumpversion patch .bumpversion.cfg
