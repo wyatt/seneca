@@ -5,10 +5,10 @@ A small, unofficial python API for SenecaLearning. This in a *beta stage* so ple
 ## Installation
 `pip install senecalearning`
 
-[PyPI link](https://pypi.org/project/senecalearning/)
 ## Usage
 ```python
 import senecalearning
 seneca = senecalearning.login("<Your Login Token")
 seneca.<method>
 ```
+## More documentation on (Github)[https://github.com/wyatt/seneca]
