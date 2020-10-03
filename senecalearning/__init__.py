@@ -1,2 +1,2 @@
 # __init__.py
-from .seneca import login
+from .seneca import Login
