@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='senecalearning',
-    version='1.0.16',
+    version='1.0.17',
     author="Wyatt Sell",
     author_email="wyatt@wyattsell.com",
     packages=["senecalearning"],
